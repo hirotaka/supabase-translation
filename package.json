@@ -1,0 +1,26 @@
+{
+  "name": "supabase-translation",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "@octokit/rest": "^18.12.0",
+    "commander": "^8.2.0",
+    "log4js": "^6.3.0",
+    "shelljs": "^0.8.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hirotaka/supabase-translation.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hirotaka/supabase-translation/issues"
+  },
+  "homepage": "https://github.com/hirotaka/supabase-translation#readme"
+}
