@@ -6,19 +6,19 @@
   "dependencies": {
     "@octokit/rest": "^18.12.0",
     "commander": "^8.2.0",
+    "dotenv": "^10.0.0",
     "log4js": "^6.3.0",
     "shelljs": "^0.8.4"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sync": "node scripts/sync.js config.json langs/ja.json"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hirotaka/supabase-translation.git"
   },
-  "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/hirotaka/supabase-translation/issues"
   },
