@@ -5,7 +5,7 @@ name: sync
 env:
   USER_NAME: hirotaka
   USER_EMAIL: hello@stackhacker.io
-  GITHUB_ACCESS_TOKE: ${{ secretes.ACCESS_TOKEN }}
+  GITHUB_ACCESS_TOKE: ${{ secrets.ACCESS_TOKEN }}
 on:
   schedule:
     - cron:  '*/15 * * * *'
