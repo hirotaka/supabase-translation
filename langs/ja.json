@@ -1,0 +1,9 @@
+{
+  "name": "Japanese",
+  "code": "ja",
+  "owner": "hirotaka",
+  "repository": "supabase-ja",
+  "maintainers": [
+    "hirotaka"
+  ]
+}
