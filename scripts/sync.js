@@ -29,8 +29,7 @@ const {
 } = getJSON(langConfigFile);
 
 const logger = log4js.getLogger(langCode);
-//logger.level = "info";
-logger.level = "debug";
+logger.level = "info";
 
 const originalUrl = `https://github.com/${owner}/${repository}.git`;
 
@@ -38,8 +37,6 @@ const username = process.env.USER_NAME;
 const token = process.env.GITHUB_ACCESS_TOKEN;
 const transUrl = `https://${transOwner}:${token}@github.com/${transOwner}/${transRepository}.git`;
 const defaultBranch = "master";
-
-logger.debug("transUrl: " + transUrl);
 
 function teardownAndExit() {
   if (program.delete) {
