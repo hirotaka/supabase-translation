@@ -1,7 +1,7 @@
 name: translation-sync
 env:
   USER_NAME: hirotaka
-  USER_EMAIL: hello@stackhacker.io
+  USER_EMAIL: 52546+hirotaka@users.noreply.github.com
   GITHUB_ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
 on:
   schedule:
@@ -9,14 +9,7 @@ on:
 
 jobs:
   sync:
-    strategy:
-      matrix:
-        os:
-          - ubuntu-latest
-        node-version:
-          - 14.x
-
-    runs-on: ${{ matrix.os }}
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
@@ -25,7 +18,7 @@ jobs:
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 14.x
           cache: 'npm'
 
       - name: Install dependencies
