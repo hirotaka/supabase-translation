@@ -6,7 +6,7 @@ env:
 on:
   schedule:
     - cron:  '15 21 * * *'
-
+  workflow_dispatch:
 jobs:
   sync:
     runs-on: ubuntu-latest

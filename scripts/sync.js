@@ -85,7 +85,9 @@ if (shell.exec(`git checkout ${syncBranch}`).code !== 0) {
 }
 
 // Pull from {source}/main
-const output = shell.exec(`git pull ${repository} ${defaultBranch}`).stdout;
+const output = shell.exec(
+  `git pull --no-rebase ${repository} ${defaultBranch}`
+).stdout;
 if (output.includes("Already up to date.")) {
   logger.info(`We are already up to date with ${repository}.`);
   teardownAndExit();
