@@ -122,7 +122,8 @@ const conflictsText = `
 The following files have conflicts and may need new translations:
   ${conflictFiles
     .map(
-      (file) => ` * [ ] [${file}](/${owner}/${repository}/commits/main/${file})`
+      (file) =>
+        ` * [ ] [${file}](/${owner}/${repository}/commits/master/${file})`
     )
     .join("\n")}
 Please fix the conflicts by pushing new commits to this pull request, either by editing the files directly on GitHub or by checking out this branch.
@@ -130,7 +131,7 @@ Please fix the conflicts by pushing new commits to this pull request, either by 
 
 const body = `
 This PR was automatically generated.
-Merge changes from [reactjs.org](https://github.com/reactjs/reactjs.org/commits/main) at ${shortHash}
+Merge changes from [supabase](https://github.com/supabase/supabase/commits/master) at ${shortHash}
 ${conflictFiles.length > 0 ? conflictsText : "No conflicts were found."}
 ## DO NOT SQUASH MERGE THIS PULL REQUEST!
 Doing so will "erase" the commits from main and cause them to show up as conflicts the next time we merge.
