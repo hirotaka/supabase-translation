@@ -165,7 +165,7 @@ async function createPullRequest() {
   const {
     data: { number },
   } = await octokit.pulls.create({
-    owner,
+    owner: transOwner,
     repo: transRepository,
     title,
     body,
@@ -174,7 +174,7 @@ async function createPullRequest() {
   });
 
   await octokit.pulls.createReviewRequest({
-    owner,
+    owner: transOwner,
     repo: transRepository,
     number,
     reviewers: getRandomSubset(maintainers, 3),
